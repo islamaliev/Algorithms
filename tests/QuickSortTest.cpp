@@ -71,7 +71,7 @@ TEST_F(QuickSortTest, SortBigRandom) {
 }
 
 
-TEST_F(QuickSortTest, DISABLED_SortBigRandomWithDuplicates) {
+TEST_F(QuickSortTest, DISABLED_SortSmallRandomWithDuplicates) {
     s({2, 3, 2, 1, 2});
     a({1, 2, 2, 2, 3});
 }

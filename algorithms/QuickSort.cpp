@@ -5,15 +5,17 @@
 
 #include "QuickSort.h"
 #include "InsertionSort.h"
+#include "KnuthShuffle.h"
 
 void QuickSort::sort(std::vector<int>& arr) {
     unsigned long size = arr.size();
-    if (size <= 3) {
+    if (size <= 6) {
         InsertionSort insertionSort;
         insertionSort.sort(arr);
         return;
     }
-    // shuffle
+    KnuthShuffle shuffler;
+    shuffler.shuffle(arr);
     sort(arr, 0, size - 1);
 }
 
