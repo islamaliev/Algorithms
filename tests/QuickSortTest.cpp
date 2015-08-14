@@ -71,12 +71,12 @@ TEST_F(QuickSortTest, SortBigRandom) {
 }
 
 
-TEST_F(QuickSortTest, DISABLED_SortSmallRandomWithDuplicates) {
+TEST_F(QuickSortTest, SortSmallRandomWithDuplicates) {
     s({2, 3, 2, 1, 2});
     a({1, 2, 2, 2, 3});
 }
 
-TEST_F(QuickSortTest, DISABLED_SortBigRandomWithDuplicates) {
+TEST_F(QuickSortTest, SortBigRandomWithDuplicates) {
     s({5, 2, 5, 8, 1, 6, 9, 4, 2, 3, 1, 2, 8, 2, 7});
     a({1, 1, 2, 2, 2, 2, 3, 4, 5, 5, 6, 7, 8, 8, 9});
 }

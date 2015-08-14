@@ -8,8 +8,8 @@ public:
     void sort(std::vector<int>& arr);
 
 private:
-    void sort(std::vector<int>& arr, unsigned long lo, unsigned long hi);
+    void sort(std::vector<int>& arr, unsigned lo, unsigned hi);
 
-    unsigned long partition(std::vector<int>& arr, unsigned long lo, unsigned long hi);
+    unsigned partition(std::vector<int>& arr, unsigned lo, unsigned hi);
 };
 

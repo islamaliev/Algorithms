@@ -1,14 +1,9 @@
-//
-// Created by Islam Aliev on 11/08/15.
-// Copyright (c) 2015 me. All rights reserved.
-//
-
 #include "QuickSort.h"
 #include "InsertionSort.h"
 #include "KnuthShuffle.h"
 
 void QuickSort::sort(std::vector<int>& arr) {
-    unsigned long size = arr.size();
+    unsigned size = (unsigned) arr.size();
     if (size <= 6) {
         InsertionSort insertionSort;
         insertionSort.sort(arr);
@@ -19,8 +14,8 @@ void QuickSort::sort(std::vector<int>& arr) {
     sort(arr, 0, size - 1);
 }
 
-void QuickSort::sort(std::vector<int>& arr, unsigned long lo, unsigned long hi) {
-    unsigned long i = partition(arr, lo, hi);
+void QuickSort::sort(std::vector<int>& arr, unsigned lo, unsigned hi) {
+    unsigned i = partition(arr, lo, hi);
     if (i - lo > 1) {
         sort(arr, lo, i - 1);
     }
@@ -29,9 +24,9 @@ void QuickSort::sort(std::vector<int>& arr, unsigned long lo, unsigned long hi) 
     }
 }
 
-unsigned long QuickSort::partition(std::vector<int>& arr, unsigned long lo, unsigned long hi) {
+unsigned QuickSort::partition(std::vector<int>& arr, unsigned lo, unsigned hi) {
     using std::swap;
-    unsigned long i(lo);
+    unsigned i(lo);
     lo++;
     while (lo <= hi) {
         if (arr[i] > arr[lo]) {

@@ -4,7 +4,7 @@
 
 void KnuthShuffle::shuffle(std::vector<int>& arr) {
     using std::swap;
-    srand((unsigned int) std::time(0));
+    srand((unsigned) std::time(0));
     unsigned long size = arr.size();
     for (int i(1); i < size; i++) {
         int randomIndex = getRandom(i - 1);
