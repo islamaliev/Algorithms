@@ -39,6 +39,6 @@ unsigned QuickSort::partition(std::vector<int>& arr, unsigned lo, unsigned hi) {
             hi--;
         }
     }
-    swap(arr[lo - 1], arr[i]);
-    return lo - 1;
+    swap(arr[hi], arr[i]);
+    return hi;
 }
