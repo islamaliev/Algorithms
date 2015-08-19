@@ -32,7 +32,7 @@ public:
             }
         }
 
-        ASSERT_LT(badShuffleCount / size, 0.5f);
+        ASSERT_LT(badShuffleCount / size, 0.6f);
     }
 
     std::vector<int> actual;
