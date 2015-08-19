@@ -67,3 +67,19 @@ TEST_F(PriorityQueueTest, DelMaxDeletesInMaxOrder) {
     ASSERT_EQ(6, queue.delMax());
     ASSERT_EQ(5, queue.delMax());
 }
+
+TEST_F(PriorityQueueTest, MaxAmongPowOf2Elemnents) {
+    queue.insert(0);
+    queue.insert(7);
+    queue.insert(1);
+    queue.insert(5);
+    queue.insert(3);
+    queue.insert(4);
+    queue.insert(2);
+    queue.insert(6);
+    ASSERT_EQ(7, queue.delMax());
+    queue.insert(8);
+    queue.insert(7);
+    ASSERT_EQ(8, queue.max());
+    ASSERT_EQ(8, queue.delMax());
+}

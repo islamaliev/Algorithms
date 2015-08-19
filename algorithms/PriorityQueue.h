@@ -5,6 +5,8 @@
 
 class PriorityQueue {
 public:
+    PriorityQueue();
+
     void insert(int val);
 
     int delMax();
@@ -16,8 +18,9 @@ public:
     void clear();
 
 private:
-    std::vector<int> vec;
+    void sink(int index);
+    void swim(int index);
 
-    std::vector<int>::iterator getMaxIterator();
+    std::vector<int> vec;
 };
 
